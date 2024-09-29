@@ -1,41 +1,58 @@
 import React from 'react';
-import ThreeScene from './three/page';
 import { Button } from 'react-bootstrap';
+import Link from 'next/link';
 
+// Custom button component
+const CustomButton: React.FC<{ text: string }> = ({ text }) => (
+  <Button className='hover:scale-110 transition-transform duration-300'>
+    {text}
+  </Button>
+);
+
+// Home page component
 const Home: React.FC = () => {
-
   return (
-    
-    <>
+    <div className='animate-slideUp overflow-hidden'>
+      {/* About and Resume Section */}
+      <section className='text-3xl pl-[500px]'>
+        <div className='grid grid-cols-2 justify-between pt-[300px] mb-40 font-mono'>
+          {/* Link to About */}
+          <Link href='/about' passHref>
+            <CustomButton text='./ about \.' />
+          </Link>
+          
+          {/* Link to Resume */}
+          <Link href='/resume' passHref>
+            <CustomButton text='./ resume \.' />
+          </Link>
+        </div>
+      </section>
 
-      <div className='text-center font-bold font serif pt-[400px]   '>
-        <div className='text-5xl'>Hey There Nice to Meet You,</div>
-        <p className='pt-2'></p>
-        <div className='text-4xl'> I’m Umendran a Software Engineer I</div>
+      {/* Introduction Section */}
+      <section className='text-center'>
+        <h1 className='text-5xl font-bold font-serif animate-slideUp'>
+          Hey There, Nice to Meet You,
+        </h1>
+        <div className='text-4xl animate-slideUp font-mono mt-2'>
+          I’m Umendran, a Software Engineer I
+        </div>
+      </section>
 
-
-      </div>
-      <div className='grid grid-cols-2  space-x-4 text-3xl  '>
-        <Button className='hover:animate-pulse'>
-          ./about\.
-        </Button>
-        <Button className=''>
-          ./resume\.
-        </Button>
-      
-      </div>
-      <div className='grid grid-cols-2  space-x-4 text-3xl  '>
-      <Button>
-        ./projects\.
-      </Button>
-      <Button>
-        ./contact\.
-      </Button>
-      </div>
-
-   
-      
-    </>
+      {/* Projects and Contact Section */}
+      <section className='text-3xl font-mono pl-[500px]'>
+        <div className='grid grid-cols-2 justify-between mt-40'>
+          {/* Link to Projects */}
+          <Link href='/projects' passHref>
+            <CustomButton text='./ projects \.' />
+          </Link>
+          
+          {/* Link to Contact */}
+          <Link href='/contact' passHref>
+            <CustomButton text='./ contact \.' />
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 };
 

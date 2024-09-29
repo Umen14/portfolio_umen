@@ -26,6 +26,45 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@keyframes fly {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30vw, -20vh); /* Move up and to the right */
+  }
+  50% {
+    transform: translate(-30vw, 30vh); /* Move down and to the left */
+  }
+  75% {
+    transform: translate(20vw, 10vh); /* Move down and to the right */
+  }
+  100% {
+    transform: translate(-20vw, -10vh); /* Move up and to the left */
+  }
+}
+
+.logo-fly {
+  animation: fly 20s infinite ease-in-out alternate;
+  opacity: 0.2; /* Adjust opacity for a lighter effect */
+  width: 100px; /* Set width for logos */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional animations for different logos to create varied movements */
+.animation1 {
+  animation-delay: 0s; /* Start immediately */
+}
+
+.animation2 {
+  animation-delay: 5s; /* Delay for second logo */
+}
+
+.animation3 {
+  animation-delay: 10s; /* Delay for third logo */
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

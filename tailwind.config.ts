@@ -13,7 +13,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        slideUp: {
+          '0%': { transform: 'translateY(50%)', opacity: '0' }, 
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+      animation: {
+        slideUp: 'slideUp 1s ease-out',
+      },
     },
+    
   },
   plugins: [],
 };
