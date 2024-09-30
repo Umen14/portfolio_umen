@@ -28,27 +28,25 @@ body {
 
 @keyframes fly {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) rotate(0deg);
   }
   25% {
-    transform: translate(30vw, -20vh); /* Move up and to the right */
+    transform: translate(50px, -30px) rotate(45deg);
   }
   50% {
-    transform: translate(-30vw, 30vh); /* Move down and to the left */
+    transform: translate(-50px, 60px) rotate(90deg);
   }
   75% {
-    transform: translate(20vw, 10vh); /* Move down and to the right */
+    transform: translate(30px, -60px) rotate(135deg);
   }
   100% {
-    transform: translate(-20vw, -10vh); /* Move up and to the left */
+    transform: translate(0, 0) rotate(180deg);
   }
 }
 
-.logo-fly {
-  animation: fly 20s infinite ease-in-out alternate;
-  opacity: 0.2; /* Adjust opacity for a lighter effect */
-  width: 100px; /* Set width for logos */
-  height: auto; /* Maintain aspect ratio */
+.logoFly {
+  animation: fly 8s infinite ease-in-out alternate;
+  opacity: 0.2;
 }
 
 /* Additional animations for different logos to create varied movements */
@@ -63,6 +61,24 @@ body {
 .animation3 {
   animation-delay: 10s; /* Delay for third logo */
 }
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: black;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
 
 
 @layer utilities {
