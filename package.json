@@ -19,6 +19,7 @@
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18",
     "react-router-dom": "^6.26.2",
+    "swiper": "^11.1.14",
     "three": "^0.164.1",
     "three-stdlib": "^2.30.1"
   },
