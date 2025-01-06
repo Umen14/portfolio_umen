@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { useState , useEffect} from 'react';
 import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -63,9 +64,14 @@ export default function ProjectCarousel() {
             link: '/project-three',
         },
     ];
+    const [isMounted, setIsMounted] = useState(false);
 
+    useEffect(() => {
+        setIsMounted(true); // Set mounted to true after client-side render
+    }, []);
     return (
         <div className="container mx-auto p-8">
+            {isMounted && (
             <Swiper
                 navigation={true}
                 modules={[Navigation]}
@@ -96,6 +102,7 @@ export default function ProjectCarousel() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            )}
         </div>
     );
 }
