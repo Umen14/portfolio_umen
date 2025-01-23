@@ -153,7 +153,7 @@ const About: React.FC = () => {
         </p>
       </section>
 
-      <section className="bg-white bg-opacity-10 p-8 rounded-lg font-mono font-bold animate-slideUp mt-10 ml-80 mr-80 text-center">
+      <section className="bg-white bg-opacity-10 p-6 sm:p-8 rounded-lg font-mono font-bold animate-slideUp mt-8 sm:mt-10 mx-4 sm:mx-10 lg:mx-40 text-center">
         Technical Languages
         <div className="flex justify-center min-w-full min-h-full">
           <div className="grid grid-cols-6 mt-10 gap-12 text-center">
@@ -244,7 +244,7 @@ const About: React.FC = () => {
 
 
       </section>
-      <section className="bg-white bg-opacity-10 p-8 rounded-lg font-mono font-bold animate-slideUp mt-10 ml-80 mr-80 text-center  ">
+      <section className="bg-white bg-opacity-10 p-6 sm:p-8 rounded-lg font-mono font-bold animate-slideUp mt-8 sm:mt-10 mx-4 sm:mx-10 lg:mx-40 text-center">
         <h2 className="">Technologies and Frameworks</h2>
         <div className="flex justify-center min-w-full min-h-full">
           <div className="grid grid-cols-5 justify-around mt-10 gap-12">
@@ -323,7 +323,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      <div className="pb-36">
+      <div className="pb-20">
         
       </div>
 

@@ -35,8 +35,8 @@ export default function ProjectCarousel() {
         },
         {
             imageUrl: 'https://placehold.co/600x400',
-            title: 'Project 5',
-            description: 'A brief description of Project Two.',
+            title: 'Appsheet Development Low-Code',
+            description: 'A low-code development platform for Appsheet which benefits for employees to time in and out.',
             link: '/project-two',
         },
         {
@@ -72,14 +72,24 @@ export default function ProjectCarousel() {
     return (
         <div className="container mx-auto p-8">
             {isMounted && (
-            <Swiper
-                navigation={true}
-                modules={[Navigation]}
-                spaceBetween={20}
-                slidesPerView={3}
-                loop={true}
-                className="w-full  mx-auto"
-            >
+         <Swiper
+         navigation={true}
+         modules={[Navigation]}
+         spaceBetween={20}
+         slidesPerView={1} 
+         breakpoints={{
+             640: {
+                 slidesPerView: 2, 
+                 spaceBetween: 15,
+             },
+             1024: {
+                 slidesPerView: 3, 
+                 spaceBetween: 20,
+             },
+         }}
+         loop={true}
+         className="w-full mx-auto"
+     >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index} className="relative">
                         <Link href={slide.link} passHref>
@@ -93,7 +103,7 @@ export default function ProjectCarousel() {
                                         className="transition-transform duration-300 group-hover:scale-105"
                                     />
                                 </div>
-                                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-4 rounded-b-lg text-white">
+                                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-4 rounded-b-lg text-white ">
                                     <h3 className="text-xl font-semibold">{slide.title}</h3>
                                     <p className="text-sm mt-1">{slide.description}</p>
                                 </div>
