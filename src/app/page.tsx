@@ -43,7 +43,7 @@ const Home: React.FC = () => {
       <section className="text-center pt-10 pb-10">
         <h1 className="text-5xl font-bold font-serif">Hey There, Nice to Meet You</h1>
         <div className="text-4xl font-mono mt-2">
-          I’m <Typewriter text="Umendran, a Software Engineer I" speed={50} />
+          I’m <Typewriter text="Umendran, a Software Engineer I" speed={40} delay={500} />
         </div>
       </section>
 

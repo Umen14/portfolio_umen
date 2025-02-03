@@ -127,7 +127,7 @@ const About: React.FC = () => {
       {/* Content section */}
       <section className="relative z-10 text-xl text-white bg-white bg-opacity-10 p-8 rounded-lg font-mono  animate-slideUp mt-10 ">
         <p className="mb-4">
-          Hello, I'm <span className="font-bold text-black bg-slate-200 rounded-lg p-1">Umendran</span>, a passionate Software Engineer. I love building
+          Hello, I'm <span className="font-bold text-black bg-slate-200 rounded-lg p-1">Umendran</span>, a Software Engineer. I love building
           web applications and tackling complex problems. As a <span className="font-bold text-black bg-slate-200 rounded-lg p-1">full-stack developer</span>, I'm proficient in a variety of technologies.
         </p>
         <p className="mb-4">
