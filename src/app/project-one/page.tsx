@@ -64,14 +64,33 @@ export default function ProjectOne() {
 
             </div>
 
-            <div className="flex items-center justify-between w-full mt-8 px-10 text-white">
+<div className="flex flex-col md:flex-row items-center justify-between w-full mt-8 px-6 md:px-10 text-white">
 
-                <div className="w-1/2 text-center animate-slideUp">
-                    <h2 className="text-2xl font-bold">A way to deliver the best for the clients</h2>
-                    <p className="mt-2 text-lg">This is an admin dashboard system designed for efficient data management where it reflects back to the mobile version where it can be downloaded in the App store and the Google Play store</p>
-                </div>
+    {/* Text Section */}
+    <div className="text-center animate-slideUp w-full md:w-1/2">
+        <h2 className="text-xl md:text-2xl font-bold">The purpose of the development</h2>
+        <p className="mt-2 text-base md:text-lg">
+            This is an admin dashboard system designed for efficient data management where it reflects back to the 
+            mobile version where it can be downloaded in the App Store and Google Play Store.
+        </p>
+    </div>
 
-                <div className="animate-tiltIn">
+    {/* Image Section */}
+    <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0 animate-tiltIn">
+        <Image
+            src="/images/SMFD.png"
+            width={700} // Reduce size for smaller screens
+            height={600}
+            alt="Admin Dashboard Preview"
+            className="rounded-lg shadow-md w-[80%] md:w-[60%] lg:w-[50%]"
+        />
+    </div>
+
+</div>
+
+
+            <div className=" items-center grid-cols-2 w-full mt-8 px-10 text-white">
+            <div className="animate-tiltIn flex item-center justify-center">
                     <Image
                         src="/images/SMFD.png"
                         width={700}
@@ -80,6 +99,12 @@ export default function ProjectOne() {
                         className="rounded-lg shadow-md animate-tiltIn"
                     />
                 </div>
+                <div className="pt-10 mx-auto w-fit text-center  animate-slideUp">
+                    <h2 className="text-2xl font-bold">The purpose of the development</h2>
+                    <p className="mt-2 text-lg">This is an admin dashboard system designed for efficient data management where it reflects back to the mobile version where it can be downloaded in the App store and the Google Play store</p>
+                </div>
+
+           
 
             </div>
         </div>
