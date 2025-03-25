@@ -101,7 +101,7 @@ export default function ProjectOne() {
                 </div>
                 <div className="pt-10 mx-auto w-fit text-center  animate-slideUp">
                     <h2 className="text-2xl font-bold">The purpose of the development</h2>
-                    <p className="mt-2 text-lg">This is an admin dashboard system designed for efficient data management where it reflects back to the mobile version where it can be downloaded in the App store and the Google Play store</p>
+                    <p className="mt-2 text-lg">To make the work easier for the clients where the app of the development can be reflected back to the user or customer using API</p>
                 </div>
 
            

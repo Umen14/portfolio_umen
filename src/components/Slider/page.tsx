@@ -41,15 +41,15 @@ export default function ProjectCarousel() {
         },
         {
             imageUrl: 'https://placehold.co/600x400',
-            title: 'Project 6',
-            description: 'A brief description of Project Three.',
-            link: '/project-three',
+            title: 'Snake Game',
+            description: 'A simple snake game for interaction purpose.',
+            link: '/project-six',
         },
         {
             imageUrl: 'https://placehold.co/600x400',
-            title: 'Project 7',
+            title: 'Tic Tac Toe',
             description: 'A brief description of Project One.',
-            link: '/project-one',
+            link: '/project-seven',
         },
         {
             imageUrl: 'https://placehold.co/600x400',
