@@ -36,20 +36,23 @@ const Hangman = () => {
 
   const handleGuess = (letter) => {
     if (guessedLetters.includes(letter) || gameOver || gameWon) return;
-
+  
     setGuessedLetters([...guessedLetters, letter]);
-
-    setWrongGuesses((prev) => {
-      if (prev + 1 >= 6) setGameOver(true);
-      return prev + 1;
-    });
-    
-
+  
+    // Check if the guessed letter is incorrect before updating wrongGuesses
+    if (!selectedWord.includes(letter)) {
+      setWrongGuesses((prev) => {
+        const newWrongGuesses = prev + 1;
+        if (newWrongGuesses >= 6) setGameOver(true);
+        return newWrongGuesses;
+      });
+    }
+  
+    // Check if the player has guessed all letters correctly
     const allLettersGuessed = selectedWord.split("").every((l) => guessedLetters.includes(l) || l === letter);
     if (allLettersGuessed) setGameWon(true);
-
-    if (wrongGuesses + 1 >= 6) setGameOver(true);
   };
+  
 
   const restartGame = () => {
     setCategory(null);
@@ -84,6 +87,7 @@ const Hangman = () => {
   };
 
   return (
+   
     <motion.div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
       <motion.h1 className="text-4xl font-bold mb-4" animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }}>Hangman</motion.h1>
       {!category ? (
@@ -113,7 +117,19 @@ const Hangman = () => {
             <div className="absolute top-2 left-[90px] w-2 h-12 bg-red-500"></div>
             {renderStickman()}
           </div>
-          {(gameOver || gameWon) && <motion.div className="mt-10 text-2xl" animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }}>{gameWon ? "You Won! 🎉" : "Game Over! 💀"}</motion.div>}
+          {(gameOver || gameWon) && (
+  <motion.div className="mt-10 text-2xl" animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }}>
+    {gameWon ? (
+      "You Won! 🎉"
+    ) : (
+      <>
+        <p>Game Over! 💀</p>
+        <p className="text-white mt-2">The correct word was: <span className="text-green-500 sfont-bold">{selectedWord}</span></p>
+      </>
+    )}
+  </motion.div>
+)}
+
           <button className="mt-10 p-2 bg-gray-700 rounded hover:bg-gray-600" onClick={restartGame}>Restart</button>
         </>
       )}
