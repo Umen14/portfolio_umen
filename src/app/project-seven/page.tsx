@@ -7,13 +7,14 @@ const TicTacToe = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(true);
   const [winner, setWinner] = useState(null);
-  const [playerMode, setPlayerMode] = useState("2P"); // '2P' or 'AI'
+  const [playerMode, setPlayerMode] = useState("AI");
   const [scores, setScores] = useState({ X: 0, O: 0, ties: 0 });
   const [winningCombo, setWinningCombo] = useState([]);
 
   useEffect(() => {
     if (playerMode === "AI" && !isXNext && !winner) {
       setTimeout(makeAIMove, 500);
+      
     }
   }, [board, isXNext, winner, playerMode]);
 

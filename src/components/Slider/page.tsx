@@ -53,9 +53,9 @@ export default function ProjectCarousel() {
         },
         {
             imageUrl: 'https://placehold.co/600x400',
-            title: 'Project 8',
+            title: 'Hang-Man',
             description: 'A brief description of Project Two.',
-            link: '/project-two',
+            link: '/project-eight',
         },
         {
             imageUrl: 'https://placehold.co/600x400',
