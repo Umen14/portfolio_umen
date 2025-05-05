@@ -46,7 +46,7 @@ const TicTacToe = () => {
     let bestScore = -Infinity;
     let move;
     
-    board.forEach((cell, i) => {
+    board.forEach((cell:any, i:any) => {
       if (!cell) {
         let newBoard = [...board];
         newBoard[i] = player;
@@ -70,7 +70,7 @@ const TicTacToe = () => {
     
     if (isMaximizing) {
       let bestScore = -Infinity;
-      board.forEach((cell, i) => {
+      board.forEach((cell:any, i:any) => {
         if (!cell) {
           let newBoard = [...board];
           newBoard[i] = "O";
@@ -81,7 +81,7 @@ const TicTacToe = () => {
       return bestScore;
     } else {
       let bestScore = Infinity;
-      board.forEach((cell, i) => {
+      board.forEach((cell:any, i:any) => {
         if (!cell) {
           let newBoard = [...board];
           newBoard[i] = "X";
@@ -93,7 +93,7 @@ const TicTacToe = () => {
     }
   };
 
-  const checkWinner = (board) => {
+  const checkWinner = (board:any) => {
     const winningCombos = [
       [0, 1, 2], [3, 4, 5], [6, 7, 8],
       [0, 3, 6], [1, 4, 7], [2, 5, 8],
@@ -109,7 +109,7 @@ const TicTacToe = () => {
     return null;
   };
 
-  const updateScores = (winner) => {
+  const updateScores = (winner:any) => {
     setScores((prev) => ({
       ...prev,
       [winner]: prev[winner] + 1,
