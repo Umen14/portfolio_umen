@@ -18,10 +18,10 @@ const categories = {
 };
 
 const Hangman = () => {
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState<keyof typeof categories | null>(null);
   const [selectedWord, setSelectedWord] = useState("");
   const [hint, setHint] = useState("");
-  const [guessedLetters, setGuessedLetters] = useState([]);
+  const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [wrongGuesses, setWrongGuesses] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [gameWon, setGameWon] = useState(false);
@@ -35,7 +35,7 @@ const Hangman = () => {
     }
   }, [category]);
 
-  const handleGuess = (letter:any) => {
+  const handleGuess = (letter: string) => {
     if (guessedLetters.includes(letter) || gameOver || gameWon) return;
   
     setGuessedLetters([...guessedLetters, letter]);

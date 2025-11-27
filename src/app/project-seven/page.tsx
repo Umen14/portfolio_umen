@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 const TicTacToe = () => {
-  const [board, setBoard] = useState(Array(9).fill(null));
+  const [board, setBoard] = useState<(string | null)[]>(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(true);
-  const [winner, setWinner] = useState(null);
+  const [winner, setWinner] = useState<string | null>(null);
   const [playerMode, setPlayerMode] = useState("AI");
   const [scores, setScores] = useState({ X: 0, O: 0, ties: 0 });
-  const [winningCombo, setWinningCombo] = useState([]);
+  const [winningCombo, setWinningCombo] = useState<number[]>([]);
 
   useEffect(() => {
     if (playerMode === "AI" && !isXNext && !winner) {
@@ -109,11 +109,14 @@ const TicTacToe = () => {
     return null;
   };
 
-  const updateScores = (winner:any) => {
-    setScores((prev) => ({
-      ...prev,
-      [winner]: prev[winner] + 1,
-    }));
+  const updateScores = (winner: string) => {
+    setScores((prev) => {
+      if (winner === "Tie") {
+        return { ...prev, ties: prev.ties + 1 };
+      } else {
+        return { ...prev, [winner]: prev[winner as keyof typeof prev] + 1 };
+      }
+    });
   };
 
   const restartGame = () => {

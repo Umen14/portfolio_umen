@@ -5,12 +5,9 @@ import { GLTFLoader } from 'three-stdlib';
 import { OrbitControls } from 'three-stdlib';
 import { DDSLoader } from 'three-stdlib';
 
-interface ThreeSceneProps {
-    modelPath: string;
-}
-
-const ThreeScene: React.FC<ThreeSceneProps> = ({ modelPath }) => {
+const ThreeScene: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null);
+    const modelPath = '/modals/';
 
     useEffect(() => {
         const currentRef = mountRef.current;
@@ -38,8 +35,8 @@ const ThreeScene: React.FC<ThreeSceneProps> = ({ modelPath }) => {
 
                 // Manually load textures
                 const textureLoader = new THREE.TextureLoader(manager);
-                const textureBaseColor = textureLoader.load(`${modelPath}/Buddy_ChibiReyna_DF.png`);
-                const textureEmissive = textureLoader.load(`${modelPath}/Buddy_ChibiReyna_DF.png`);
+                const textureBaseColor = textureLoader.load(`${modelPath}/Buddy_ChibiReyna_DF.dds`);
+                const textureEmissive = textureLoader.load(`${modelPath}/Buddy_ChibiReyna_DF.dds`);
 
                 // Manually assign textures to materials
                 model.traverse((node: any) => {
@@ -84,7 +81,7 @@ const ThreeScene: React.FC<ThreeSceneProps> = ({ modelPath }) => {
             window.removeEventListener('resize', handleResize);
             currentRef?.removeChild(renderer.domElement);
         };
-    }, [modelPath]);
+    }, []);
 
     return <div ref={mountRef} />;
 };

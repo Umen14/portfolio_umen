@@ -17,10 +17,10 @@ const categories = {
 };
 
 const Hangman = () => {
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState<keyof typeof categories | null>(null);
   const [selectedWord, setSelectedWord] = useState("");
   const [hint, setHint] = useState("");
-  const [guessedLetters, setGuessedLetters] = useState([]);
+  const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [wrongGuesses, setWrongGuesses] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [gameWon, setGameWon] = useState(false);
@@ -34,7 +34,7 @@ const Hangman = () => {
     }
   }, [category]);
 
-  const handleGuess = (letter) => {
+  const handleGuess = (letter: string) => {
     if (guessedLetters.includes(letter) || gameOver || gameWon) return;
   
     setGuessedLetters([...guessedLetters, letter]);
@@ -94,7 +94,7 @@ const Hangman = () => {
         <div>
           <p className="text-lg mb-2">Choose a category:</p>
           {Object.keys(categories).map((cat) => (
-            <button key={cat} className="m-2 p-2 bg-gray-700 rounded hover:bg-gray-600" onClick={() => setCategory(cat)}>{cat}</button>
+            <button key={cat} className="m-2 p-2 bg-gray-700 rounded hover:bg-gray-600" onClick={() => setCategory(cat as keyof typeof categories)}>{cat}</button>
           ))}
         </div>
       ) : (
