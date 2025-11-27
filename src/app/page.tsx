@@ -21,6 +21,7 @@ const CustomButton: React.FC<{ text: string }> = React.memo(({ text }) => (
 // Home page component
 const Home: React.FC = () => {
   return (
+    <div className='bg-black text-white'>
     <motion.div
       className="overflow-hidden animate-slideUp"
       initial={{ opacity: 0 }}
@@ -59,6 +60,7 @@ const Home: React.FC = () => {
         </div>
       </section>
     </motion.div>
+    </div>
   );
 };
 

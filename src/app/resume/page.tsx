@@ -23,7 +23,7 @@ const ResumePage = () => {
   }, [hasLoaded, setLoaded]);
 
   return (
-    <div>
+    <div className="bg-black text-white ">
       {/* Back Link */}
       <div className="pt-8 max-w-fit ml-10">
         <Link href="/" passHref className="hover:scale-105 transition-transform duration-300">

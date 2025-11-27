@@ -6,7 +6,7 @@ import ProjectCarousel from '@/components/Slider/page';
 export default function Contact() {
  
     return (
-        <div className="h-screen flex flex-col">
+        <div className="h-screen flex flex-col bg-black text-white">
             <div className='pt-8 max-w-fit ml-10 '>
                 <Link href="/" passHref className='hover:scale-105 transition-transform duration-300'>
                     <div className="flex items-center space-x-2">

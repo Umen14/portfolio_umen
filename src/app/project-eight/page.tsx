@@ -87,7 +87,7 @@ const Hangman = () => {
   };
 
   return (
-   
+   <div className="bg-black text-white">
     <motion.div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
       <motion.h1 className="text-4xl font-bold mb-4" animate={{ scale: [0.8, 1] }} transition={{ duration: 0.5 }}>Hangman</motion.h1>
       {!category ? (
@@ -134,6 +134,7 @@ const Hangman = () => {
         </>
       )}
     </motion.div>
+    </div>
   );
 };
 
