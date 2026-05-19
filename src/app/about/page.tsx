@@ -3,17 +3,6 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
-import pythonLogo from "/public/logos/python.png";
-import nodejsLogo from "/public/logos/node.png";
-import reactLogo from "/public/logos/react.png";
-import dockerlogo from "/public/logos/Docker.png";
-import gitlogo from "/public/logos/Git.png";
-import csslogo from "/public/logos/CSS3.png";
-import htmllogo from "/public/logos/HTML5.png";
-import javascriptlogo from "/public/logos/JavaScript.png";
-import typescriptlogo from "/public/logos/TypeScript.png";
-import sqllogo from "/public/logos/SQL.png";
-import tailwindlogo from "/public/logos/Tailwind.png";
 
 import { motion } from "framer-motion";
 import { type } from "os";
@@ -168,7 +157,7 @@ const About: React.FC = () => {
                     transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                   }}
                 >
-                  <Image src={pythonLogo} alt="Python Logo" width={50} height={50} />
+                  <Image src="/logos/python.png" alt="Python Logo" width={50} height={50} />
                 </motion.div>
                 <span className="mt-4">python</span>
             </div>
@@ -181,7 +170,7 @@ const About: React.FC = () => {
                     transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                   }}
                 >
-                  <Image src={htmllogo} alt="HTML Logo" width={50} height={50} />
+                  <Image src="/logos/HTML5.png" alt="HTML Logo" width={50} height={50} />
                 </motion.div>
                 <span className="mt-4">html</span>
             </div>
@@ -194,7 +183,7 @@ const About: React.FC = () => {
                     transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                   }}
                 >
-                  <Image src={csslogo} alt="CSS Logo" width={50} height={50} />
+                  <Image src="/logos/CSS3.png" alt="CSS Logo" width={50} height={50} />
                 </motion.div>
                 <span className="mt-4">css</span>
             </div>
@@ -207,7 +196,7 @@ const About: React.FC = () => {
                     transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                   }}
                 >
-                  <Image src={javascriptlogo} alt="JavaScript Logo" width={50} height={50} />
+                  <Image src="/logos/JavaScript.png" alt="JavaScript Logo" width={50} height={50} />
                 </motion.div>
                 <span className="mt-4">javascript</span>
             </div>
@@ -220,7 +209,7 @@ const About: React.FC = () => {
                     transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                   }}
                 >
-                  <Image src={typescriptlogo} alt="TypeScript Logo" width={50} height={50} />
+                  <Image src="/logos/TypeScript.png" alt="TypeScript Logo" width={50} height={50} />
                 </motion.div>
                 <span className="mt-4">typescript</span>
             </div>
@@ -233,7 +222,7 @@ const About: React.FC = () => {
                     transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                   }}
                 >
-                  <Image src={sqllogo} alt="SQL Logo" width={50} height={50} />
+                  <Image src="/logos/SQL.png" alt="SQL Logo" width={50} height={50} />
                 </motion.div>
                 <span className="mt-4">sql</span>
             </div>
@@ -258,7 +247,7 @@ const About: React.FC = () => {
                   transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                 }}
               >
-                <Image src={nodejsLogo} alt="Node.js Logo" width={90} height={50} />
+                <Image src="/logos/node.png" alt="Node.js Logo" width={90} height={50} />
               </motion.div>
               <span className="mt-9">node.js</span>
             </div>
@@ -274,7 +263,7 @@ const About: React.FC = () => {
                   transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                 }}
               >
-                <Image src={reactLogo} alt="React Logo" width={70} height={50} />
+                <Image src="/logos/react.png" alt="React Logo" width={70} height={50} />
               </motion.div>
               <span className="mt-6">react</span>
             </div>
@@ -288,7 +277,7 @@ const About: React.FC = () => {
                   transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                 }}
               >
-                <Image src={tailwindlogo} alt="Tailwind Logo" width={70} height={50} />
+                <Image src="/logos/Tailwind.png" alt="Tailwind Logo" width={70} height={50} />
               </motion.div>
               <span className="mt-4">tailwind</span>
             </div>
@@ -302,7 +291,7 @@ const About: React.FC = () => {
                   transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                 }}
               >
-                <Image src={gitlogo} alt="Git Logo" width={70} height={50} />
+                <Image src="/logos/Git.png" alt="Git Logo" width={70} height={50} />
               </motion.div>
               <span className="mt-4">git</span>
             </div>
@@ -316,7 +305,7 @@ const About: React.FC = () => {
                   transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                 }}
               >
-                <Image src={dockerlogo} alt="Docker Logo" width={70} height={50} />
+                <Image src="/logos/Docker.png" alt="Docker Logo" width={70} height={50} />
               </motion.div>
               <span className="mt-4">docker</span>
             </div>
